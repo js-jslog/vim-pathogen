@@ -1,3 +1,16 @@
+# js-jslog vim config and plugins
+
+go to the users home directory and clone this repo as .vim
+
+`git clone --recursive git@github.com:js-jslog/vim-pathogen.git .vim` (installs submodules too)
+
+`cd .vim`
+
+`sh create_vimrc.sh` - creates a symbolic link to the .vimrc file inside this repository in the parent directory
+
+
+----------------
+
 # pathogen.vim
 
 Manage your `'runtimepath'` with ease.  In practical terms, pathogen.vim
