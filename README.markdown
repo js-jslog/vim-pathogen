@@ -9,6 +9,10 @@ go to the users home directory and clone this repo as .vim
 `sh create_vimrc.sh` - creates a symbolic link to the .vimrc file inside this repository in the parent directory
 
 
+If any new submodules are pulled in with your next `git pull` then run the following to check them out:
+
+`git submodule update --init --recursive`
+
 ----------------
 
 # pathogen.vim
