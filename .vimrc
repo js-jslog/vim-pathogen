@@ -22,6 +22,9 @@ autocmd vimenter * NERDTree
 " fix subdirectory navigation NERDTree
 set encoding=utf-8
 let g:NERDTreeDirArrows=0
+let NERDTreeShowHidden=1
+map <F2> :NERDTreeToggle<CR>
+map nt :NERDTreeToggle<CR>
 
 " linting config for syntastic
 set statusline+=%#warningsmsg#
