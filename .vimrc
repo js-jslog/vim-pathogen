@@ -1,6 +1,11 @@
 imap jj <ESC>
 imap jk <ESC>
 
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
