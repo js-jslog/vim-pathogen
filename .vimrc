@@ -43,3 +43,21 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 colorscheme apprentice
+
+set noshowmode
+
+let g:lightline = {
+            \ 'colorscheme': 'jellybeans',
+            \ 'active': {
+            \   'left':[ [ 'mode', 'paste' ],
+            \            [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+            \   ]
+            \ },
+            \ 'component_function': {
+            \   'gitbranch': 'fugitive#head',
+            \   'filename': 'LightLineFilename',
+            \ },
+            \ }
+function! LightLineFilename()
+    return expand('%')
+endfunction
