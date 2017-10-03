@@ -18,6 +18,43 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
+set cursorline
+set visualbell
+set ignorecase
+set splitright
+
+" Auto resize vim splits to make active split more readible
+set winwidth=104
+set winheight=5
+set winminheight=5
+set winheight=999 " this looks like a duplication to me
+
+" Scrolling
+set scrolloff=8
+set sidescrolloff=15
+set sidescroll=1
+
+" Toggle relative numbering and set to absolute on loss of focus and insert
+" mode
+set rnu
+function! ToggleNumbersOn()
+    set nu!
+    set rnu
+endfunction
+function! ToggleRelativeOn()
+    set rnu!
+    set nu
+endfunction
+autocmd FocusLost * call ToggleRelativeOn() " This looks like it should be the other function
+autocmd FocusGained * call ToggleRelativeOn()
+autocmd InsertEnter * call ToggleRelativeOn() " This looks like it should be the other function
+autocmd InsertLeave * call ToggleRelativeOn()
+
+" resize panes
+nnoremap <silent> <Right> :vertical resize +5<cr>
+nnoremap <silent> <Left> :vertical resize -5<cr>
+nnoremap <silent> <Up> :resize +5<cr>
+nnoremap <silent> <Down> :resize -5<cr>
 
 execute pathogen#infect()
 
