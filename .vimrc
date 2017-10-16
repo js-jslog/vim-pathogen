@@ -1,6 +1,8 @@
 imap jj <ESC>
 imap jk <ESC>
 
+imap m. ,
+
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
